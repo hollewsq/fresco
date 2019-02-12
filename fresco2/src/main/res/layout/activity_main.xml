@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/round"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="圆角"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <Button
+        android:id="@+id/roundx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="圆形"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/round"/>
+
+    <Button
+        android:id="@+id/proportion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="比例1.2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/roundx"/>
+
+    <Button
+        android:id="@+id/progressivetype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="渐进式"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/proportion"/>
+
+    <Button
+        android:id="@+id/cache"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="磁盘缓存"
+        app:layout_constraintTop_toBottomOf="@id/round"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <Button
+        android:id="@+id/gif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="加载动图"
+        app:layout_constraintTop_toBottomOf="@id/roundx"
+        app:layout_constraintLeft_toRightOf="@id/cache"/>
+
+    <Button
+        android:id="@+id/monitor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="加载监听"
+        app:layout_constraintTop_toBottomOf="@id/proportion"
+        app:layout_constraintLeft_toRightOf="@id/gif"/>
+
+    <Button
+        android:id="@+id/http"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="配置Okhttp"
+        app:layout_constraintTop_toBottomOf="@id/progressivetype"
+        app:layout_constraintLeft_toRightOf="@id/monitor"/>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/my_imager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/gif"/>
+
+</android.support.constraint.ConstraintLayout>
